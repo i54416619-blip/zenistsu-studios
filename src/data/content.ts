@@ -560,8 +560,8 @@ export const about = {
 
 export const contactInfo = {
   email: "zenistsustudios@zohomail.in",
-  phone: "+1 (310) 555-0192",
-  location: "Los Angeles, California",
+  phone: "+91 7032224055",
+  location: "Andhra Pradesh, India",
   socials: [
     { platform: "Instagram", url: "https://instagram.com/zeniststudios" },
     { platform: "X", url: "https://x.com/zeniststudios" },
