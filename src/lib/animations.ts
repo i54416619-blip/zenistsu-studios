@@ -4,13 +4,16 @@
 
 import type { Variants } from "framer-motion";
 
+const easeCustom = [0.25, 0.46, 0.45, 0.94] as const;
+const easeSlide = [0.76, 0, 0.24, 1] as const;
+
 // ─── Fade Variants ────────────────────────────────────────────
 
 export const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.6, ease: easeCustom },
   },
 };
 
@@ -19,7 +22,7 @@ export const fadeUp: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.7, ease: easeCustom },
   },
 };
 
@@ -28,7 +31,7 @@ export const fadeDown: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.7, ease: easeCustom },
   },
 };
 
@@ -37,7 +40,7 @@ export const fadeLeft: Variants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.7, ease: easeCustom },
   },
 };
 
@@ -46,7 +49,7 @@ export const fadeRight: Variants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.7, ease: easeCustom },
   },
 };
 
@@ -57,7 +60,7 @@ export const scaleUp: Variants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.6, ease: easeCustom },
   },
 };
 
@@ -90,7 +93,7 @@ export const letterReveal: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.5, ease: easeCustom },
   },
 };
 
@@ -99,7 +102,7 @@ export const wordReveal: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.4, ease: easeCustom },
   },
 };
 
@@ -107,7 +110,7 @@ export const lineReveal: Variants = {
   hidden: { scaleX: 0, originX: 0 },
   visible: {
     scaleX: 1,
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.8, ease: easeCustom },
   },
 };
 
@@ -117,11 +120,11 @@ export const slideUp: Variants = {
   hidden: { y: "100%" },
   visible: {
     y: "0%",
-    transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.7, ease: easeSlide },
   },
   exit: {
     y: "-100%",
-    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.5, ease: easeSlide },
   },
 };
 
@@ -134,14 +137,14 @@ export const pageTransition: Variants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: easeCustom,
       staggerChildren: 0.1,
     },
   },
   exit: {
     opacity: 0,
     y: -20,
-    transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.3, ease: easeCustom },
   },
 };
 
@@ -151,7 +154,7 @@ export const cardHover = {
   rest: { scale: 1 },
   hover: {
     scale: 1.02,
-    transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.3, ease: easeCustom },
   },
 };
 
@@ -162,7 +165,7 @@ export const navbarVariants: Variants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 },
+    transition: { duration: 0.6, ease: easeCustom, delay: 0.2 },
   },
 };
 
@@ -170,12 +173,12 @@ export const mobileMenuVariants: Variants = {
   closed: {
     opacity: 0,
     x: "100%",
-    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.4, ease: easeSlide },
   },
   open: {
     opacity: 1,
     x: "0%",
-    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.5, ease: easeSlide },
   },
 };
 
@@ -201,7 +204,7 @@ export const loadingVariants: Variants = {
   visible: { opacity: 1 },
   exit: {
     opacity: 0,
-    transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+    transition: { duration: 0.6, ease: easeSlide, delay: 0.2 },
   },
 };
 
@@ -210,7 +213,7 @@ export const loadingLogoVariants: Variants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.8, ease: easeCustom },
   },
 };
 
@@ -218,6 +221,6 @@ export const loadingBarVariants: Variants = {
   hidden: { scaleX: 0 },
   visible: {
     scaleX: 1,
-    transition: { duration: 1.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 1.8, ease: easeCustom },
   },
 };

@@ -60,6 +60,15 @@ export interface TeamMember {
   image: string;
 }
 
+export interface PricingTier {
+  name: string;
+  price: string;
+  period: string;
+  desc: string;
+  features: string[];
+  highlight: boolean;
+}
+
 export interface Stat {
   value: number;
   suffix: string;
@@ -105,7 +114,7 @@ export const services: Service[] = [
       "A/B tested creative variants",
       "Performance analytics dashboard",
     ],
-    priceRange: "$5,000 – $25,000",
+    priceRange: "$800 – $3,000",
     deliverables: [
       "3–5 ad variations (15s, 30s, 60s)",
       "Raw project files",
@@ -129,7 +138,7 @@ export const services: Service[] = [
       "Brand guideline compliance",
       "4K & 8K delivery",
     ],
-    priceRange: "$8,000 – $50,000",
+    priceRange: "$1,200 – $4,500",
     deliverables: [
       "Hero commercial (30s–90s)",
       "Product beauty shots (10+)",
@@ -153,7 +162,7 @@ export const services: Service[] = [
       "Agent branding integration",
       "MLS-optimized formats",
     ],
-    priceRange: "$3,000 – $15,000",
+    priceRange: "$600 – $2,000",
     deliverables: [
       "Property film (60s–3min)",
       "Social media cutdowns",
@@ -177,7 +186,7 @@ export const services: Service[] = [
       "Real-time rendering option",
       "API integration available",
     ],
-    priceRange: "$5,000 – $20,000",
+    priceRange: "$800 – $2,500",
     deliverables: [
       "Custom AI avatar model",
       "10 initial video scripts",
@@ -201,7 +210,7 @@ export const services: Service[] = [
       "Trend-responsive content",
       "Performance-based iteration",
     ],
-    priceRange: "$2,000 – $10,000/mo",
+    priceRange: "$600 – $1,800/mo",
     deliverables: [
       "20–50 UGC ad variations/month",
       "Hook & script library",
@@ -225,7 +234,7 @@ export const services: Service[] = [
       "Annual brand films",
       "Investor pitch videos",
     ],
-    priceRange: "$10,000 – $50,000",
+    priceRange: "$1,500 – $5,000",
     deliverables: [
       "Brand film (2–5 min)",
       "Sizzle reel (60s)",
@@ -550,7 +559,7 @@ export const about = {
 // ─── Contact Page ─────────────────────────────────────────────
 
 export const contactInfo = {
-  email: "hello@zeniststudios.com",
+  email: "zenistsustudios@zohomail.in",
   phone: "+1 (310) 555-0192",
   location: "Los Angeles, California",
   socials: [
@@ -569,10 +578,56 @@ export const contactInfo = {
     "Other",
   ],
   budgetRanges: [
-    "$2,000 – $5,000",
-    "$5,000 – $15,000",
-    "$15,000 – $30,000",
-    "$30,000 – $50,000",
-    "$50,000+",
+    "$600 – $1,200",
+    "$1,200 – $2,500",
+    "$2,500 – $3,500",
+    "$3,500 – $5,000",
+    "$5,000+",
   ],
 };
+
+// ─── Pricing Tiers ────────────────────────────────────────────
+
+export const pricingTiers: PricingTier[] = [
+  {
+    name: "Sprint",
+    price: "$600",
+    period: "per campaign",
+    desc: "Ideal for launching a single high-performing product ad or campaign.",
+    features: [
+      "1 Master Commercial (30s)",
+      "3 Social Cutdowns",
+      "A/B Hook Variations",
+      "10-day Turnaround",
+    ],
+    highlight: false,
+  },
+  {
+    name: "Growth (Most Popular)",
+    price: "$2,200",
+    period: "per campaign",
+    desc: "Full multi-channel commercial suite for ambitious DTC and tech brands.",
+    features: [
+      "3 Master Commercials",
+      "10 Social Cutdowns",
+      "Custom AI Avatars",
+      "Multilingual Voiceovers",
+      "5-day Turnaround",
+    ],
+    highlight: true,
+  },
+  {
+    name: "Enterprise Studio",
+    price: "$5,000+",
+    period: "custom monthly",
+    desc: "Dedicated AI production team generating unlimited monthly creative assets.",
+    features: [
+      "Unlimited Ad Variations",
+      "Dedicated AI Pipeline",
+      "24/7 Priority Editing",
+      "Dedicated Creative Director",
+      "48hr Turnaround",
+    ],
+    highlight: false,
+  },
+];
